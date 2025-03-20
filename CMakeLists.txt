@@ -28,7 +28,7 @@ OPTION(ZLIB_CONST "Sets ZLIB_CONST preprocessor definition" OFF)
 option(QUAZIP_BZIP2 "Enables BZIP2 compression" ON)
 option(QUAZIP_BZIP2_STDIO "Output BZIP2 errors to stdio" ON)
 
-option(QUAZIP_FETCH_LIBS "Enables fetching third-party libraries if not found" ${WIN32})
+option(QUAZIP_FETCH_LIBS "Enables fetching third-party libraries if not found" OFF)
 option(QUAZIP_FORCE_FETCH_LIBS "Enables fetching third-party libraries always" OFF)
 
 if (QUAZIP_USE_QT_ZLIB AND BUILD_SHARED_LIBS)
@@ -207,7 +207,7 @@ if(QUAZIP_BZIP2)
     endif()
 
     if(QUAZIP_BZIP2)
-        find_package(BZip2)
+        find_package(BZip2 REQUIRED)
         add_compile_definitions(HAVE_BZIP2)
     endif()
 endif()
