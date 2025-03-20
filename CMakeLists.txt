@@ -25,7 +25,7 @@ endif()
 OPTION(ZLIB_CONST "Sets ZLIB_CONST preprocessor definition" OFF)
 
 # Make BZIP2 optional
-option(QUAZIP_BZIP2 "Enables BZIP2 compression" ON)
+option(QUAZIP_BZIP2 "Enables BZIP2 compression" OFF)
 option(QUAZIP_BZIP2_STDIO "Output BZIP2 errors to stdio" ON)
 
 option(QUAZIP_FETCH_LIBS "Enables fetching third-party libraries if not found" OFF)
